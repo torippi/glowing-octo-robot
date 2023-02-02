@@ -5,14 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IframeComponent } from './iframe.component';
 
-import {RouterModule, Route} from '@angular/router'
+import { RouterModule, Route } from '@angular/router'
 
 const ROUTES: Route[] = [
-  {path: '', redirectTo:'welcome', pathMatch: 'full'},
-  {path: 'welcome',component: AppComponent}, 
-  {path: 'classic', children: [
-    {path: '**', component: IframeComponent}
-  ]}
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  { path: 'welcome', component: AppComponent },
+  {
+    path: 'classic', children: [
+      { path: '**', component: IframeComponent }
+    ]
+  }
 ]
 
 @NgModule({
