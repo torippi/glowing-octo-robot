@@ -5,9 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-
 export class AppComponent {
-  title = 'angular-sample';
+  title = 'N-Music';
 
   musicData = [
     {

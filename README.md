@@ -1,23 +1,10 @@
-# glowing-octo-robot
-Music application using the Notion database
+# NMusic
 
-1-1. background of systemization
-
-A database of music of interest has been created on the Notion page. As of January 14, 2023, it is necessary to open the link in order to play the music.
-
-1-2. purpose of systemization
-　To enable playback from applications based on the Notion database. 1-3.
-
-1-3. scope of systemization
-　Registration and deletion of songs from the database will be done manually. Music in the database can be played by pressing the play button on the application.
-
-# AngularSample
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
