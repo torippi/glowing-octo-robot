@@ -452,7 +452,6 @@
     </a>
   </div>
 
-<<<<<<< HEAD
     <!-- Music Datadase-->
     <table class="table">
       <tr>
@@ -472,37 +471,7 @@
         <span>音楽情報取得</span>
       </button>
     </div>
-=======
-  <!-- Music Datadase-->
-  <table class="table">
-    <tr>
-      <th>No</th><th>Name</th><th>Artist</th><th>Youtube</th>
-    </tr>
-    <tr *ngFor="let data of musicData">
-      <td>{{data.No}}</td>
-      <td>{{data.Name}}</td>
-      <td>{{data.Artist}}</td>
-      <td><a href="{{data.Youtube}}">{{data.Youtube}}</a></td>
-    </tr>
-  </table>
 
-  <div class="card-container">
-    <button class="card card-small" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>音楽情報取得</span>
-    </button>
-    <button id="play-button" class="card card-small" tabindex="0">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-      <span>Youtube再生</span>
-    </button>
-  </div>
->>>>>>> origin/main
-
-  <!-- Youtube動画を埋め込み-->
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/WnVDf7Wkg4Y?loop=1&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen allow="picture-in-picture"></iframe>
-  <router-outlet>
-  <a routerLink="classic/iframe1">Iframe1</a>
-  </router-outlet>
   <!-- Footer -->
   <footer>
       Love Angular?&nbsp;
