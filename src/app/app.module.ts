@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { YoutubePlayerExampleModule } from './youtube-module';
 
 @NgModule({
   // このモジュールに属するコンポーネント
@@ -13,8 +12,7 @@ import { YoutubePlayerExampleModule } from './youtube-module';
   // このモジュールで利用する他のモジュール
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    YoutubePlayerExampleModule
+    AppRoutingModule
   ],
   // サービスクラスを登録。APIとかで利用。
   providers: [],
