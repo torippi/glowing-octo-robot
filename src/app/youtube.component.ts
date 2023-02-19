@@ -5,10 +5,11 @@ let apiLoaded = false;
 @Component({
     selector: 'app-youtube-player',
     template: `
-    <div class="player-container">
         <youtube-player videoId="{{VideoId}}" (ready)="onPlayerReady($event)" (stateChange)="onStateChange($event)"teChange></youtube-player>
-    </div>
     <a>{{VideoState}}</a>
+    <div>
+
+    </div>
     `,
     styleUrls: ['./app.component.scss']
 })
