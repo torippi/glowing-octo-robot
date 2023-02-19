@@ -1,21 +1,28 @@
-import { NgModule, Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 let apiLoaded = false;
 
 @Component({
     selector: 'app-youtube-player',
     template: `
+        <div class="card-container">
+        <button (click)="onStartClick($event)">
+            再生
+        </button>
+        <button (click)="onStopClick($event)">
+            停止
+        </button>
+    </div>
         <youtube-player videoId="{{VideoId}}" (ready)="onPlayerReady($event)" (stateChange)="onStateChange($event)"teChange></youtube-player>
     <a>{{VideoState}}</a>
-    <div>
-
-    </div>
     `,
     styleUrls: ['./app.component.scss']
 })
+
 export class YoutubePlayerComponent {
     VideoId = 'WnVDf7Wkg4Y';
     VideoState = 0;
+    VideoPlayer: any;
 
     // Component Start 
     ngOnInit() {
@@ -31,21 +38,30 @@ export class YoutubePlayerComponent {
 
     // Auto play after loading
     onPlayerReady(event: any) {
+        this.VideoPlayer = event.target;
         event.target.mute();
         event.target.unMute();
-        event.target.setVolume(20);        
+        event.target.setVolume(20);
         //event.target.playVideo();
     }
 
-    onStateChange(event: any){
+    onStateChange(event: any) {
         // Detect and operate every time Video status changes
         // https://developers.google.com/youtube/iframe_api_reference?hl=ja#:~:text=player.getPlayerState()%3ANumber
         this.VideoState = event.target.getPlayerState();
-        if (this.VideoState == 0){
-            this.VideoId = 'KYpv7FUq_yY';
+        if (this.VideoState == 0) {
+            this.VideoId = 'JHq6kYWdgNo';
         }
-        else if (this.VideoState == 5){
+        else if (this.VideoState == 5) {
             event.target.playVideo();
         }
+    }
+
+    onStartClick(event: any){
+        this.VideoPlayer.playVideo();
+    }
+
+    onStopClick(event: any){
+        this.VideoPlayer.pauseVideo();
     }
 }

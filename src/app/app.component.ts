@@ -17,9 +17,9 @@ export class AppComponent {
     },
     {
       No: '0000-0002',
-      Name: '私だけが好きだった。',
-      Artist: 'すいそうぐらし',
-      Youtube: 'https://www.youtube.com/watch?v=WnVDf7Wkg4Y'
+      Name: '歩み',
+      Artist: 'GReeeeN',
+      Youtube: 'https://www.youtube.com/watch?v=JHq6kYWdgNo'
     }
   ]
 }
