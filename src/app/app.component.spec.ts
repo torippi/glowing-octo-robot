@@ -1,15 +1,20 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 import { AppComponent } from './app.component';
+import { YoutubePlayerComponent } from './youtube.component';
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        YouTubePlayerModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        YoutubePlayerComponent
       ],
     }).compileComponents();
   });
@@ -32,4 +37,19 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('N-Music app is running!');
   });
+
+  it('should lender youtube ', () => {
+    const fixture = TestBed.createComponent(YoutubePlayerComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
+  });
+
+  it('start youtube button name', () => {
+    const fixture = TestBed.createComponent(YoutubePlayerComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.card-container')?.textContent).toContain('再生');
+    expect(compiled.querySelector('.card-container')?.textContent).toContain('停止');
+  });
+
 });

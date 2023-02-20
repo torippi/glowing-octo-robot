@@ -52,7 +52,8 @@ export class YoutubePlayerComponent {
         // https://developers.google.com/youtube/iframe_api_reference?hl=ja#:~:text=player.getPlayerState()%3ANumber
         this.VideoState = event.target.getPlayerState();
         if (this.VideoState == 0) {
-            this.VideoId = this.VideoId[this.RandomInt(this.VideoIds.length)];
+            this.VideoId = this.VideoIds[this.RandomInt(this.VideoIds.length)];
+            event.target.playVideo();
         }
         else if (this.VideoState == 5) {
             event.target.playVideo();
