@@ -6,17 +6,17 @@ let apiLoaded = false;
     selector: 'app-youtube-player',
     template: `
         <div class="card-container">
-        <button (click)="onStartClick($event)">
-            再生
+        <button class="btn" type="button" (click)="onStartClick($event)">
+            Start
         </button>
-        <button (click)="onStopClick($event)">
-            停止
+        <button  class="btn" type="button" (click)="onStopClick($event)">
+            Stop
         </button>
     </div>
         <youtube-player videoId="{{VideoId}}" (ready)="onPlayerReady($event)" (stateChange)="onStateChange($event)"teChange></youtube-player>
     <a>{{VideoState}}</a>
     `,
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./youtube.component.scss']
 })
 
 export class YoutubePlayerComponent {
